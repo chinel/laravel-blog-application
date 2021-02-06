@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d3a64699-8a50-4fe4-a864-e6936b1102ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_06_183535_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_06_183535_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_06_183633_create_blogs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_06_183633_create_blogs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_06_183652_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_06_183452_create_roles_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +145,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\blogApplication\Repositories" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -171,7 +178,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612635452538</updated>
-      <workItem from="1612635464233" duration="5683000" />
+      <workItem from="1612635464233" duration="7169000" />
     </task>
     <servers />
   </component>
@@ -179,9 +186,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1612637510705">
+    <state x="61" y="203" key="NewPhpClassDialog" timestamp="1612642493574">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1612637510705" />
+    <state x="61" y="203" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1612642493574" />
+    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1612642252158">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1612642252158" />
   </component>
 </project>
