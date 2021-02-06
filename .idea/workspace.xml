@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3a64699-8a50-4fe4-a864-e6936b1102ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/cake_config_setting_v0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blogApplication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blogApplication.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,11 +171,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612635452538</updated>
-      <workItem from="1612635464233" duration="1419000" />
+      <workItem from="1612635464233" duration="5683000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1612637510705">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1612637510705" />
   </component>
 </project>
