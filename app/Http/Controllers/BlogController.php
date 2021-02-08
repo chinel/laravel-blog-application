@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Session;
 use function redirect;
 use App\Http\Requests\BlogRequest;
 use App\Services\BlogService;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+
 
 
 class BlogController extends Controller

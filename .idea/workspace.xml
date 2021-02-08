@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3a64699-8a50-4fe4-a864-e6936b1102ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/BlogRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/BlogRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/BlogService.php" beforeDir="false" afterPath="$PROJECT_DIR$/Services/BlogService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/new-post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/create-post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,11 +145,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Auth" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\blogApplication\app\Http\Controllers\Auth" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\blogApplication\resources\views" />
       <recent name="C:\xampp\htdocs\blogApplication\Repositories" />
     </key>
   </component>
@@ -178,7 +185,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612635452538</updated>
-      <workItem from="1612635464233" duration="70207000" />
+      <workItem from="1612635464233" duration="72903000" />
     </task>
     <servers />
   </component>
@@ -194,9 +201,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="61" y="203" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1612642493574" />
-    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1612775786645">
+    <state x="517" y="288" key="NewPhpFileDialog" timestamp="1612786183013">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1612775786645" />
+    <state x="517" y="288" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1612786183013" />
   </component>
 </project>

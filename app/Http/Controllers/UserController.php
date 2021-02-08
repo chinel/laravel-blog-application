@@ -6,7 +6,8 @@ use function redirect;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\LoginRequest;
 use App\Services\UserService;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+
 
 
 use Illuminate\Http\Request;
