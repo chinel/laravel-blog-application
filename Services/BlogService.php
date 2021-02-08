@@ -16,16 +16,22 @@ class BlogService
        return $this->blogRespository->create($attributes);
     }
 
+    public  function getAllBlogPost()
+    {
+        return $this->blogRespository->getAllBlogPost();
+    }
+
+    public function getAllBlogPostInAscOrder(){
+        return $this->blogRespository->getAllBlogPostInAscOrder();
+    }
+
     public function getBlogByUserId($userId){
        return $this->blogRespository->getBlogByUserId($userId);
     }
 
-    public function getBlogInDescOrder($userId){
-        return $this->blogRespository->getBlogInDescOrder($userId);
-    }
 
-    public function getBlogInAscOrder($userId){
-        return $this->blogRespository->getBlogInAscOrder($userId);
+    public function getBlogByUserInAscOrder($userId){
+        return $this->blogRespository->getBlogByUserInAscOrder($userId);
     }
 
 }

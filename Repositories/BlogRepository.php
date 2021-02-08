@@ -14,17 +14,22 @@ class BlogRepository
         return $this->blog->create($attributes);
     }
 
+    public function getAllBlogPost(){
+        return $this->blog->orderBy('created_at','DESC');
+    }
+
+    public function getAllBlogPostInAscOrder(){
+        return $this->blog->orderBy('created_at','ASC');
+
+    }
+
     public function getBlogByUserId($userId){
-        return $this->blog->where('user_id', $userId)->orderBy('created_at','DESC')->get();
+        return $this->blog->where('user_id', $userId)->orderBy('created_at','DESC');
     }
 
-    public function getBlogInDescOrder($userId){
-        return $this->blog->where('user_id', $userId)->orderBy('created_at','DESC')->get();
 
-    }
-
-    public function getBlogInAscOrder($userId){
-        return $this->blog->where('user_id', $userId)->orderBy('created_at','ASC')->get();
+    public function getBlogByUserInAscOrder($userId){
+        return $this->blog->where('user_id', $userId)->orderBy('created_at','ASC');
     }
 
 
