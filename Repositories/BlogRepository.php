@@ -23,6 +23,10 @@ class BlogRepository
 
     }
 
+    public function getBlogPostById($blogId){
+        return $this->blog->find($blogId)->first();
+    }
+
     public function getBlogByUserId($userId){
         return $this->blog->where('user_id', $userId)->orderBy('created_at','DESC');
     }

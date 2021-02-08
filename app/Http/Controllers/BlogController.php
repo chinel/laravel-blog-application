@@ -21,6 +21,8 @@ class BlogController extends Controller
         $this->blogService->create($blogRequest);
     }
 
+
+
     public function getAllBlogPosts(Request $request){
      $blogPosts = [];
         if($request->query('sortBy')){
@@ -40,6 +42,13 @@ class BlogController extends Controller
 
         }
         return view('blog-frontend.index', compact('blogPosts'));
+    }
+
+
+    public function getBlogPostById($blogId){
+        $blogPost = $this->blogService->getBlogPostById($blogId);
+        return view('blog-frontend.view', compact('blogPost'));
+
     }
 
 

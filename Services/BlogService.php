@@ -25,6 +25,10 @@ class BlogService
         return $this->blogRespository->getAllBlogPostInAscOrder();
     }
 
+    public function getBlogPostById($blogId){
+        return $this->blogRespository->getBlogPostById($blogId);
+    }
+
     public function getBlogByUserId($userId){
        return $this->blogRespository->getBlogByUserId($userId);
     }
