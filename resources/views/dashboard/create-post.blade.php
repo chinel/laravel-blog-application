@@ -70,6 +70,6 @@
 
 @stop
 @section('scripts')
-    {!! HTML::script('js/jqBootstrapValidation.js') !!}
-    {!! HTML::script('js/validation.js') !!}
+    <script src="{{url('js/jqBootstrapValidation.js')}}"></script>
+    <script src="{{url('js/validation.js')}}"></script>
 @stop

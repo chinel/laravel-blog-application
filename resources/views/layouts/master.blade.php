@@ -10,16 +10,19 @@
     <title>@yield('page-title') - Blog.com</title>
 
     <!-- core CSS -->
-    {!! HTML::style('vendor/bootstrap/css/bootstrap.css') !!}
+    <link rel="stylesheet" href="{{url('vendor/bootstrap/css/bootstrap.css')}}">
+
 
 
     <!-- Custom fonts -->
-    {!! HTML::style('vendor/fontawesome-free/css/all.min.css') !!}
+    <link rel="stylesheet" href="{{url('vendor/fontawesome-free/css/all.min.css')}}">
+
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles -->
-    {!! HTML::style('css/custom.css') !!}
+    <link rel="stylesheet" href="{{url('css/custom.css')}}">
+
 
 </head>
 
@@ -33,13 +36,15 @@
 
 <!-- Footer -->
 @include('layouts.partials.footer')
+
 <!-- core JavaScript -->
-{!! HTML::script('vendor/jquery/jquery.min.js') !!}
-{!! HTML::script('vendor/bootstrap/js/bootstrap.bundle.min.js') !!}
+<script src="{{url('vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{url('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
 
 
 <!-- Custom scripts -->
-{!! HTML::script('js/custom.js') !!}
+<script src="{{url('js/custom.js')}}"></script>
 @yield('scripts')
 </body>
 
