@@ -19,6 +19,28 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-8 mx-auto auth-wrapper">
+                <div class="mb-3">
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <p class="alert alert-danger">{{ $error }}</p>
+                        @endforeach
+
+                    @endif
+
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissable">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+                            {{ session('success')}}
+                        </div>
+                    @endif
+
+                    @if (session('error'))
+                        <div class="alert alert-danger alert-dismissable">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+                            {{ session('error')}}
+                        </div>
+                    @endif
+                </div>
                 <p>Please fill in the post details below</p>
 
                 <form  novalidate>

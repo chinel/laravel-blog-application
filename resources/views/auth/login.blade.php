@@ -2,14 +2,13 @@
 @section('page-title', "Login")
 @section('content')
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url({{url('img/Banner.jpg')}}">
+    <header class="masthead" style="background-image: url('img/Banner.jpg')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="site-heading">
-                        <h1>Be Informed</h1>
-                        <span class="subheading">Evolving Today for better Tomorrow</span>
+                    <div class="page-heading">
+                        <h1>Login</h1>
                     </div>
                 </div>
             </div>
@@ -19,81 +18,56 @@
     <!-- Main Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="col-lg-6 col-md-8 mx-auto auth-wrapper">
+                <div class="mb-3">
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <p class="alert alert-danger">{{ $error }}</p>
+                        @endforeach
 
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-summary">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by
-                        <a href="#">Start Bootstrap</a>
-                        on September 24, 2019</p>
+                    @endif
+
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissable">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+                            {{ session('success')}}
+                        </div>
+                    @endif
+
+                    @if (session('error'))
+                        <div class="alert alert-danger alert-dismissable">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+                            {{ session('error')}}
+                        </div>
+                    @endif
                 </div>
+                <p>Please enter your details below</p>
 
+                <form  novalidate method="POST">
 
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by
-                        <a href="#">Start Bootstrap</a>
-                        on September 18, 2019</p>
-                </div>
+                    <div class="control-group mb-4">
+                        <div class="form-group  controls">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control"  id="email" required data-validation-required-message="Please enter your email address.">
+                            <span class="help-block text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group col-xs-12  controls">
+                            <label>Your Password</label>
+                            <input type="password" class="form-control"  id="password" required data-validation-required-message="Please enter your password.">
+                            <span class="help-block text-danger"></span>
+                        </div>
+                    </div>
 
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Science has not yet mastered prophecy
-                        </h2>
-                        <h3 class="post-summary">
-                            We predict too much for the next year and yet far too little for the next ten.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by
-                        <a href="#">Start Bootstrap</a>
-                        on August 24, 2019</p>
-                </div>
-
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Failure is not an option
-                        </h2>
-                        <h3 class="post-summary">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by
-                        <a href="#">Start Bootstrap</a>
-                        on July 8, 2019</p>
-                </div>
-
-                <!-- Pager -->
-                <div class="clearfix">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                    <div class="mt-5 text-right">
+                        <button type="submit" class="btn btn-primary" >Login</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+
 @stop
 @section('scripts')
     {!! HTML::script('js/jqBootstrapValidation.js') !!}
