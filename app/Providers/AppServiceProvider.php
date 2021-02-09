@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+       // \App::bind('BlogService',\App\Services\BlogService::class);
     }
 
     /**

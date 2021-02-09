@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Session;
-use function redirect;
 use App\Http\Requests\BlogRequest;
 use App\Services\BlogService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 
