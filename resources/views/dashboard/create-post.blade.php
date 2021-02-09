@@ -2,7 +2,7 @@
 @section('page-title', "Create Post")
 @section('content')
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/Banner.jpg')">
+    <header class="masthead" style="background-image: url('{{url('img/Banner.jpg')}}')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
