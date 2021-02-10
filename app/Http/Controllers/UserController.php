@@ -28,7 +28,7 @@ class UserController extends Controller
         return redirect('/auth/login');
     }
 
-    public function login(LoginRequest $request){php artisan make:command ImportPosts --command=import:posts
+    public function login(LoginRequest $request){
          if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
              return redirect('/dashboard');
          }

@@ -18,7 +18,7 @@ class ImportPosts extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Import posts from an API every hour';
 
     /**
      * Create a new command instance.
