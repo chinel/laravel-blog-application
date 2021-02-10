@@ -17,4 +17,9 @@ class Blog extends Model
         'title',
         'description',
     ];
+
+    public function getUser($userId){
+        $user = User::find($userId);
+        return $user->firstname . " ". $user->lastname;
+    }
 }
