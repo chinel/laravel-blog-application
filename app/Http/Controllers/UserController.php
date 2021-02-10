@@ -21,9 +21,11 @@ class UserController extends Controller
     }
 
     public function register(RegisterRequest $request){
-        $request->password = bcrypt($request->password);
-        $this->userService->create($request);
-        return back()->with(['success'=> 'Registration successful']);
+        $userData = $request->all();
+        $userData['password'] = bcrypt($request->password);
+        $this->userService->create($userData);
+        Session::flash('success','Registration successful. Please Login');
+        return redirect('/auth/login');
     }
 
     public function login(LoginRequest $request){

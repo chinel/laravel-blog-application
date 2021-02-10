@@ -41,7 +41,7 @@
                 @foreach($blogPosts as $value)
 
             <div class="post-preview">
-                <a href="post.html">
+                <a href="{{url('/blog/'.$value->id)}}">
                     <h2 class="post-title">
                          {{$value->title}}
                     </h2>

@@ -43,8 +43,8 @@
                 </div>
                 <p>Please enter your details below</p>
 
-                <form  novalidate>
-
+                <form method="POST" action="{{url('/auth/register')}}" novalidate>
+                        @csrf
                     <div class="control-group mb-4">
                         <div class="form-group  controls">
                             <label>First Name</label>
@@ -55,7 +55,7 @@
                     <div class="control-group mb-4">
                         <div class="form-group  controls">
                             <label>Last Name</label>
-                            <input type="email" class="form-control" name="lastname"  id="lastname" required data-validation-required-message="Please enter your last name">
+                            <input type="text" class="form-control" name="lastname"  id="lastname" required data-validation-required-message="Please enter your last name">
                             <span class="help-block text-danger"></span>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                     <div class="control-group mb-4">
                         <div class="form-group col-xs-12  controls">
                             <label>Your Password</label>
-                            <input type="password" class="form-control" name="password"  id="password" name="password" required data-validation-required-message="Please enter your password.">
+                            <input type="password" class="form-control" name="password"  id="password"  required data-validation-required-message="Please enter your password.">
                             <span class="help-block text-danger"></span>
                         </div>
                     </div>

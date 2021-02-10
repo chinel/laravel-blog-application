@@ -29,16 +29,16 @@ class BlogController extends Controller
             $sortBy = $request->query('sortBy');
            switch ($sortBy){
                case "latest":
-                   $blogPosts = $this->blogService->getAllBlogPost()->paginate(1);
+                   $blogPosts = $this->blogService->getAllBlogPost()->paginate(5);
                    break;
                case "oldest":
-                   $blogPosts = $this->blogService->getAllBlogPostInAscOrder()->paginate(1);
+                   $blogPosts = $this->blogService->getAllBlogPostInAscOrder()->paginate(5);
                    break;
                default:
-                   $blogPosts = $this->blogService->getAllBlogPost()->paginate(1);
+                   $blogPosts = $this->blogService->getAllBlogPost()->paginate(5);
            }
      }else{
-            $blogPosts = $this->blogService->getAllBlogPost()->paginate(1);
+            $blogPosts = $this->blogService->getAllBlogPost()->paginate(5);
 
         }
 
@@ -48,6 +48,7 @@ class BlogController extends Controller
 
     public function getBlogPostById($blogId){
         $blogPost = $this->blogService->getBlogPostById($blogId);
+      
         return view('blog-frontend.view', compact('blogPost'));
 
     }

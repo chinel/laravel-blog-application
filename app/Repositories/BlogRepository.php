@@ -24,7 +24,7 @@ class BlogRepository
     }
 
     public function getBlogPostById($blogId){
-        return $this->blog->find($blogId)->first();
+        return $this->blog->find($blogId);
     }
 
     public function getBlogByUserId($userId){
