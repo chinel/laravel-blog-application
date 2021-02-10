@@ -28,6 +28,10 @@ class Blog extends Model
         return \Carbon\Carbon::parse($date)->format('F j, Y');
     }
 
+    public function getPostSummaryTitle($postTitle){
+        return (strlen($postTitle) <= 45) ? substr($postTitle, 0, 50): substr($postTitle, 0, 40). "...";
+    }
+
     public function getPostSummary($postContent){
         return (strlen($postContent) <= 50) ? substr($postContent, 0, 50): substr($postContent, 0, 47). "...";
     }

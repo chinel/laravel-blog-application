@@ -65,9 +65,9 @@
                 @foreach($blogPosts as $value)
             <div class="col-lg-4 col-md-8 col-sm-12">
                 <div class="post-preview blog-wrapper">
-                    <a href="post.html">
+                    <a href="{{url('/blog/'.$value->id)}}">
                         <h2 class="post-title">
-                            {{$value->title}}
+                            {{$value->getPostSummaryTitle($value->title)}}
                         </h2>
                     </a>
                     <h3 class="post-summary">

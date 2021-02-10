@@ -17,10 +17,10 @@ class BlogController extends Controller
     }
 
     public function create(BlogRequest $blogRequest){
-        //return Auth::user()->id;
+
         $blogDetails = $blogRequest->all();
         $blogDetails['user_id'] = Auth::user()->id;
-       // return $blogDetails;
+
         $this->blogService->create($blogDetails);
         Session::flash('success','Post successfully published');
         return redirect('/dashboard');
