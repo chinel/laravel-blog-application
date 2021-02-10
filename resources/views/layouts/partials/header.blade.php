@@ -10,12 +10,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">What's Trending </a>
                 </li>
+                @if(!Auth::check())
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/auth/login') }}">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/auth/register') }}">Register</a>
                 </li>
+               @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         My Account
@@ -27,6 +29,7 @@
                         <a class="dropdown-item" href="{{url('/auth/logout')}}">Logout</a>
                     </div>
                 </li>
+                    @endif
             </ul>
         </div>
     </div>
