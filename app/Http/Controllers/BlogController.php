@@ -20,6 +20,7 @@ class BlogController extends Controller
 
         $blogDetails = $blogRequest->all();
         $blogDetails['user_id'] = Auth::user()->id;
+        $blogDetails['publication_date'] = \Carbon\Carbon::now();
 
         $this->blogService->create($blogDetails);
         Session::flash('success','Post successfully published');

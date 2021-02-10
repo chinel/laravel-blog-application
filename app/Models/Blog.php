@@ -16,7 +16,8 @@ class Blog extends Model
     protected $fillable = [
         'title',
         'description',
-        'user_id'
+        'user_id',
+        'publication_date'
     ];
 
     public function getUser($userId){

@@ -11,7 +11,7 @@
                         <h1>{{$blogPost->title}}</h1>
                         <span class="meta">Posted by
               <a href="#">{{$blogPost->getUser($blogPost->user_id)}}</a>
-              on {{$blogPost->formatDate($blogPost->created_at)}}</span>
+              on {{$blogPost->formatDate($blogPost->publication_date)}}</span>
                     </div>
                 </div>
             </div>

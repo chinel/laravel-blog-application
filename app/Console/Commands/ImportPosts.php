@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Services\BlogService;
 use Illuminate\Console\Command;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
@@ -28,11 +29,12 @@ class ImportPosts extends Command
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(BlogService $blogService)
     {
         parent::__construct();
 
         $this->client = new Client();
+        $this->blogService = $blogService;
     }
 
     /**
@@ -56,6 +58,11 @@ class ImportPosts extends Command
 
             $res = json_decode($res->getBody()->getContents(), true);
             $posts =  $res['data'];
+            foreach ($posts as  $post){
+                if(!$this->blogService->isPostExists($post->title, 1)){
+
+                }
+            }
             \Log::info("Cron is working fine!");
 
         }catch (GuzzleException $e){

@@ -16,11 +16,11 @@ class BlogRepository
     }
 
     public function getAllBlogPost(){
-        return $this->blog->orderBy('id','DESC');
+        return $this->blog->orderBy('publication_date','DESC');
     }
 
     public function getAllBlogPostInAscOrder(){
-        return $this->blog->orderBy('id','ASC');
+        return $this->blog->orderBy('publication_date','ASC');
 
     }
 
@@ -29,12 +29,12 @@ class BlogRepository
     }
 
     public function getBlogByUserId($userId){
-        return $this->blog->where('user_id', $userId)->orderBy('created_at','DESC');
+        return $this->blog->where('user_id', $userId)->orderBy('publication_date','DESC');
     }
 
 
     public function getBlogByUserInAscOrder($userId){
-        return $this->blog->where('user_id', $userId)->orderBy('created_at','ASC');
+        return $this->blog->where('user_id', $userId)->orderBy('publication_date','ASC');
     }
 
     public function isPostExists($postTitle, $userId)

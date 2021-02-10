@@ -75,7 +75,7 @@
                     </h3>
                     <p class="post-meta">Posted by
                         <a href="#">{{$value->getUser($value->user_id)}}</a>
-                        on {{$value->formatDate($value->created_at)}}</p>
+                        on {{$value->formatDate($value->publication_date)}}</p>
                 </div>
 
             </div>

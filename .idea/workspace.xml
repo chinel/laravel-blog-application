@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d3a64699-8a50-4fe4-a864-e6936b1102ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/ImportPosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/ImportPosts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Blog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/BlogRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BlogRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/BlogService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/BlogService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_06_183633_create_blogs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_06_183633_create_blogs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/BlogsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/BlogsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog-frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog-frontend/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog-frontend/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog-frontend/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +192,7 @@
       <updated>1612635452538</updated>
       <workItem from="1612635464233" duration="129362000" />
       <workItem from="1612962924633" duration="535000" />
-      <workItem from="1612977073490" duration="14736000" />
+      <workItem from="1612977073490" duration="15757000" />
     </task>
     <servers />
   </component>
@@ -193,10 +200,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="71" y="143" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612994874344">
+    <state x="71" y="143" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612995265288">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="71" y="143" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1612994874344" />
+    <state x="71" y="143" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1612995265288" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1612994505991">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
