@@ -41,7 +41,7 @@
                         </div>
                     @endif
                 </div>
-                <p>Please enter your details below</p>
+                <p>Please enter your details below or <a href="{{url('/auth/login')}}" class="auth-links">Login</a></p>
 
                 <form method="POST" action="{{url('/auth/register')}}" novalidate>
                         @csrf

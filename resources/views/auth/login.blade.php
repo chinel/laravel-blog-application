@@ -41,21 +41,21 @@
                         </div>
                     @endif
                 </div>
-                <p>Please enter your details below</p>
+                <p>Please enter your details below or <a href="{{url('/auth/register')}}" class="auth-links">Register</a></p>
 
-                <form  novalidate method="POST">
-
+                <form  novalidate method="POST" action="{{url('/auth/login')}}">
+                            @csrf
                     <div class="control-group mb-4">
                         <div class="form-group  controls">
                             <label>Email Address</label>
-                            <input type="email" class="form-control"  id="email" required data-validation-required-message="Please enter your email address.">
+                            <input type="email" class="form-control" name="email"  id="email" required data-validation-required-message="Please enter your email address.">
                             <span class="help-block text-danger"></span>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group col-xs-12  controls">
                             <label>Your Password</label>
-                            <input type="password" class="form-control"  id="password" required data-validation-required-message="Please enter your password.">
+                            <input type="password" class="form-control" name="password"  id="password" required data-validation-required-message="Please enter your password.">
                             <span class="help-block text-danger"></span>
                         </div>
                     </div>

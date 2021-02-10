@@ -467,3 +467,9 @@ span.text-danger ul li{
 .pagination-wrapper nav div.hidden div:last-child{
     display: none!important;
 }
+
+a.auth-links{
+    text-decoration: none;
+    color: #0085A1;
+    font-weight: bold;
+}
