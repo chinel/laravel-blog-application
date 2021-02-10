@@ -43,8 +43,8 @@
                 </div>
                 <p>Please fill in the post details below</p>
 
-                <form  novalidate>
-
+                <form method="POST" action="{{url('/new-post')}}"  novalidate>
+                      @csrf
                     <div class="control-group mb-4">
                         <div class="form-group  controls">
                             <label>Title</label>

@@ -5,7 +5,7 @@ use App\Http\Requests\BlogRequest;
 use App\Services\BlogService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Session;
 
 
 class BlogController extends Controller
@@ -17,8 +17,13 @@ class BlogController extends Controller
     }
 
     public function create(BlogRequest $blogRequest){
-        $blogRequest->user_id = Auth::user()->id;
-        $this->blogService->create($blogRequest);
+        //return Auth::user()->id;
+        $blogDetails = $blogRequest->all();
+        $blogDetails['user_id'] = Auth::user()->id;
+       // return $blogDetails;
+        $this->blogService->create($blogDetails);
+        Session::flash('success','Post successfully published');
+        return redirect('/dashboard');
     }
 
 
@@ -48,7 +53,7 @@ class BlogController extends Controller
 
     public function getBlogPostById($blogId){
         $blogPost = $this->blogService->getBlogPostById($blogId);
-      
+
         return view('blog-frontend.view', compact('blogPost'));
 
     }
@@ -61,16 +66,16 @@ class BlogController extends Controller
             $sortBy = $request->query('sortBy');
             switch ($sortBy){
                 case "latest":
-                    $blogPosts = $this->blogService->getBlogByUserId($userId)->paginate(10);
+                    $blogPosts = $this->blogService->getBlogByUserId($userId)->paginate(5);
                     break;
                 case "oldest":
-                    $blogPosts = $this->blogService->getBlogByUserInAscOrder($userId)-paginate(10);
+                    $blogPosts = $this->blogService->getBlogByUserInAscOrder($userId)-paginate(5);
                     break;
                 default:
-                    $blogPosts = $this->blogService->getBlogByUserId($userId)->paginate(10);
+                    $blogPosts = $this->blogService->getBlogByUserId($userId)->paginate(5);
             }
         }else{
-            $blogPosts = $this->blogService->getBlogByUserId($userId)->paginate(10);
+            $blogPosts = $this->blogService->getBlogByUserId($userId)->paginate(5);
 
         }
         return view('dashboard.index', compact('blogPosts'));
