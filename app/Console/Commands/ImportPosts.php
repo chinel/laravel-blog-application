@@ -3,9 +3,12 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 
 class ImportPosts extends Command
 {
+    protected  $client;
     /**
      * The name and signature of the console command.
      *
@@ -28,15 +31,35 @@ class ImportPosts extends Command
     public function __construct()
     {
         parent::__construct();
+
+        $this->client = new Client();
     }
 
     /**
      * Execute the console command.
      *
-     * @return int
+     *
      */
     public function handle()
     {
-        return 0;
+
+        try {
+            $headers = [
+                'Content-Type' => 'application/json',
+                'Accept' => 'application/json',
+            ];
+
+            $res = $this->client->get('https://sq1-api-test.herokuapp.com/posts',
+                [
+                    'headers' => $headers,
+                ]);
+
+            $res = json_decode($res->getBody()->getContents(), true);
+            $posts =  $res['data'];
+            \Log::info("Cron is working fine!");
+
+        }catch (GuzzleException $e){
+            \Log::alert('Request Exception: '.$e);
+        }
     }
 }
