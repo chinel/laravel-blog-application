@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d3a64699-8a50-4fe4-a864-e6936b1102ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/BlogRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BlogRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog-frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog-frontend/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/BlogsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/BlogsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UsersTableSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612635452538</updated>
-      <workItem from="1612635464233" duration="126452000" />
+      <workItem from="1612635464233" duration="127978000" />
     </task>
     <servers />
   </component>
