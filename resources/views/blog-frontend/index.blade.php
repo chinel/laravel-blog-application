@@ -28,6 +28,16 @@
                  </div>
              </div>
             @else
+                <div class="row">
+                    <div class="col-md-12 text-right mb-5">
+                        <form action="{{url('/')}}" method="GET" id="viewBy">
+                            <select name="sortBy" id="filter" >
+                                <option @if(request()->query('sortBy') === "latest") selected @endif value="latest">Latest Trends</option>
+                                <option @if(request()->query('sortBy') === "oldest") selected @endif value="oldest">Old Trends</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
                 @foreach($blogPosts as $value)
 
             <div class="post-preview">
@@ -48,20 +58,9 @@
 
 
             <!-- Pager -->
-            <div class="clearfix">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="clearfix pagination-wrapper ">
+                {!! $blogPosts->links() !!}
+
             </div>
         </div>
     </div>

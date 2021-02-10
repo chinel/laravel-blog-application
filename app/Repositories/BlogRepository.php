@@ -15,11 +15,11 @@ class BlogRepository
     }
 
     public function getAllBlogPost(){
-        return $this->blog->orderBy('created_at','DESC');
+        return $this->blog->orderBy('id','DESC');
     }
 
     public function getAllBlogPostInAscOrder(){
-        return $this->blog->orderBy('created_at','ASC');
+        return $this->blog->orderBy('id','ASC');
 
     }
 

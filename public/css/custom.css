@@ -462,3 +462,8 @@ span.text-danger ul li{
   font-size: 14px;
   font-weight: 700;
 }
+
+
+.pagination-wrapper nav div.hidden div:last-child{
+    display: none!important;
+}

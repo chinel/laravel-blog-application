@@ -29,4 +29,8 @@
       });
   }
 
+    $('#filter').change(function () {
+        setTimeout(function (){$('#viewBy').submit()}, 1000);
+    });
+
 })(jQuery); // End of use strict
