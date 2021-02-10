@@ -69,7 +69,7 @@ class BlogController extends Controller
                     $blogPosts = $this->blogService->getBlogByUserId($userId)->paginate(5);
                     break;
                 case "oldest":
-                    $blogPosts = $this->blogService->getBlogByUserInAscOrder($userId)-paginate(5);
+                    $blogPosts = $this->blogService->getBlogByUserInAscOrder($userId)->paginate(5);
                     break;
                 default:
                     $blogPosts = $this->blogService->getBlogByUserId($userId)->paginate(5);
