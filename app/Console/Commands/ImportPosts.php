@@ -2,10 +2,12 @@
 
 namespace App\Console\Commands;
 
-use App\Services\BlogService;
+
+
 use Illuminate\Console\Command;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\DB;
 
 class ImportPosts extends Command
 {
@@ -24,17 +26,17 @@ class ImportPosts extends Command
      */
     protected $description = 'Import posts from an API every hour';
 
+
     /**
      * Create a new command instance.
      *
      * @return void
      */
-    public function __construct(BlogService $blogService)
+    public function __construct()
     {
         parent::__construct();
 
         $this->client = new Client();
-        $this->blogService = $blogService;
     }
 
     /**
@@ -59,14 +61,21 @@ class ImportPosts extends Command
             $res = json_decode($res->getBody()->getContents(), true);
             $posts =  $res['data'];
             foreach ($posts as  $post){
-                if(!$this->blogService->isPostExists($post->title, 1)){
-
+                $checkIfExist =  $this->checkIfRecordExist($post['title']);
+                if(!$checkIfExist){
+                    $post['publication_date'] =  \Carbon\Carbon::parse($post['publication_date'])->toDateTimeString();
+                    $post['user_id'] = 1;
+                    DB::table('blogs')->insert($post);
                 }
             }
-            \Log::info("Cron is working fine!");
+            \Log::info("Successfully imported posts!");
 
         }catch (GuzzleException $e){
             \Log::alert('Request Exception: '.$e);
         }
+    }
+
+    public function checkIfRecordExist($postTitle){
+        DB::table('blogs')->where('title','=',$postTitle)->where('user_id', '=', 1)->get()->count();
     }
 }

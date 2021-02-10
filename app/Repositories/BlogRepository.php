@@ -37,10 +37,7 @@ class BlogRepository
         return $this->blog->where('user_id', $userId)->orderBy('publication_date','ASC');
     }
 
-    public function isPostExists($postTitle, $userId)
-    {
-        return $this->blog->where('title','=',$postTitle)->where('user_id', '=', $userId)->get()->count();
-    }
+
 
 
 }
