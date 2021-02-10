@@ -21,59 +21,31 @@
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
 
+            @if(count($blogPosts) == 0)
+             <div class="row">
+                 <div class="col-md-12 text-center">
+                     <h2>No Blog Post found</h2>
+                 </div>
+             </div>
+            @else
+                @foreach($blogPosts as $value)
+
             <div class="post-preview">
                 <a href="post.html">
                     <h2 class="post-title">
-                        Man must explore, and this is exploration at its greatest
+                         {{$value->title}}
                     </h2>
                     <h3 class="post-summary">
-                        Problems look mighty small from 150 miles up
+                        {{$value->getPostSummary($value->description)}}
                     </h3>
                 </a>
                 <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
-                    on September 24, 2019</p>
+                    <a href="#">{{$value->getUser($value->user_id)}}</a>
+                    on {{$value->formatDate($value->created_at)}}</p>
             </div>
+                @endforeach
+            @endif
 
-
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                    </h2>
-                </a>
-                <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
-                    on September 18, 2019</p>
-            </div>
-
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Science has not yet mastered prophecy
-                    </h2>
-                    <h3 class="post-summary">
-                        We predict too much for the next year and yet far too little for the next ten.
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
-                    on August 24, 2019</p>
-            </div>
-
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        Failure is not an option
-                    </h2>
-                    <h3 class="post-summary">
-                        Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
-                    on July 8, 2019</p>
-            </div>
 
             <!-- Pager -->
             <div class="clearfix">
