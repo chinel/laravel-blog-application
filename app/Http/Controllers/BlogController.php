@@ -3,9 +3,14 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\BlogRequest;
 use App\Services\BlogService;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use function redirect;
 
 
 class BlogController extends Controller
@@ -15,6 +20,13 @@ class BlogController extends Controller
     public function  __construct(BlogService $blogService){
         $this->blogService = $blogService;
     }
+
+    /**
+     * Create a new Blog Post
+     *
+     * @param BlogRequest $blogRequest
+     * @return RedirectResponse|Redirector
+     */
 
     public function create(BlogRequest $blogRequest){
 
@@ -28,6 +40,12 @@ class BlogController extends Controller
     }
 
 
+    /**
+     * Get All blog Posts, and if orderBy Query string order all post in either ascending or descending order
+     *
+     * @param Request $request
+     * @return Factory|View
+     */
 
     public function getAllBlogPosts(Request $request){
      $blogPosts = [];
@@ -52,6 +70,12 @@ class BlogController extends Controller
     }
 
 
+    /**
+     * Get Post details by iD
+     *
+     * @param $blogId
+     * @return Factory|View
+     */
     public function getBlogPostById($blogId){
         $blogPost = $this->blogService->getBlogPostById($blogId);
 
@@ -60,6 +84,12 @@ class BlogController extends Controller
     }
 
 
+    /**
+     * Get all posts for the logged in user
+     *
+     * @param Request $request
+     * @return Factory|View
+     */
     public function getBlogPostByUser(Request $request){
         $blogPosts = [];
         $userId = Auth::user()->id;

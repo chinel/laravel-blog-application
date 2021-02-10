@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Session;
 use function redirect;
 use App\Http\Requests\RegisterRequest;
@@ -20,6 +22,13 @@ class UserController extends Controller
         $this->userService = $userService;
     }
 
+
+    /**
+     * Register a new user
+     *
+     * @param RegisterRequest $request
+     * @return RedirectResponse|Redirector
+     */
     public function register(RegisterRequest $request){
         $userData = $request->all();
         $userData['password'] = bcrypt($request->password);
@@ -28,6 +37,12 @@ class UserController extends Controller
         return redirect('/auth/login');
     }
 
+    /**
+     * Login a user
+     *
+     * @param LoginRequest $request
+     * @return RedirectResponse|Redirector
+     */
     public function login(LoginRequest $request){
          if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
              return redirect('/dashboard');
@@ -36,6 +51,13 @@ class UserController extends Controller
              return back()->with(['error'=> 'Invalid Email or Password']);
          }
     }
+
+
+    /**
+     * Logout a user
+     *
+     * @return RedirectResponse|Redirector
+     */
     public function logout(){
         Auth::logout();
         return redirect('/');

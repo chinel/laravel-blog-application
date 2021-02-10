@@ -12,6 +12,11 @@ class UserRepository
         $this->user = $user;
     }
 
+    /**
+     * Create a new user
+     * @param $attributes
+     * @return mixed
+     */
     public function create($attributes){
         return $this->user->create($attributes);
     }
