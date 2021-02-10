@@ -38,4 +38,10 @@ class BlogService
         return $this->blogRespository->getBlogByUserInAscOrder($userId);
     }
 
+    public function isPostExists($postTitle, $userId)
+    {
+        return $this->blogRespository->isPostExists($postTitle, $userId);
+
+    }
+
 }

@@ -2,6 +2,7 @@
 namespace App\Repositories;
 use App\Models\Blog;
 
+
 class BlogRepository
 {
     protected $blog;
@@ -34,6 +35,11 @@ class BlogRepository
 
     public function getBlogByUserInAscOrder($userId){
         return $this->blog->where('user_id', $userId)->orderBy('created_at','ASC');
+    }
+
+    public function isPostExists($postTitle, $userId)
+    {
+        return $this->blog->where('title','=',$postTitle)->where('user_id', '=', $userId)->get()->count();
     }
 
 
