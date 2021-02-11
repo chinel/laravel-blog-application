@@ -24,7 +24,7 @@ This application is a mini blog application built with PHP and Laravel Framework
 - To start the scheduler on your server if you are using a linux based operating system. Run this command as an administrator <strong>crontab -e</strong>
 - This will open the Crontab file of the server. Then paste the code below into the file
 - <strong>cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1</strong>
-- Note: the path-to-your-project has to be replaced with the path of your project
+- Note: the <strong>path-to-your-project</strong> has to be replaced with the path to the project on your server
 
 If you are on your localhost and you want to run this scheduler to test it. <br/>You can simply replace the <strong>hourly()</strong> with <strong>everyMinute()</strong> inside of the schedule function of the kernel file which can be found in <strong>app/Console/Kernel.php file</strong><br/>
 And then run this command <strong>php artisan schedule:run</strong> to start the scheduler manually .This will pull posts from the external api and import it into the database immediately without waiting for 1 hour
