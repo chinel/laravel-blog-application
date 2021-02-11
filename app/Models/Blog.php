@@ -20,6 +20,8 @@ class Blog extends Model
         'publication_date'
     ];
 
+    public $timestamps = false;
+
     public function getUser($userId){
         $user = User::find($userId);
         return $user->firstname . " ". $user->lastname;
